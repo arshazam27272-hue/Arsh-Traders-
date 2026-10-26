@@ -86,11 +86,14 @@
                     <div class="form-group"><label>Aapka Naam</label><input type="text" id="name" required placeholder="e.g. Ramesh Kumar"></div>
                     <div class="form-group"><label>Mobile Number</label><input type="tel" id="phone" required placeholder="e.g. 98765xxxxx"></div>
                     <div class="form-group"><label>Kya maal chahiye aur kitna?</label><textarea id="req" rows="3" required placeholder="Jaise: 5 Ton Loha scrap chahiye..."></textarea></div>
-                    <button type="submit" class="btn">WhatsApp Par Enquiry Bhejein</button>
+                    <button type="submit" class="btn">WhatsApp Par Enquiry Bhejein</button> 
                 </form>
             </div>
         </div>
     </section>
     <footer><p>&copy; 2026 Arsh Traders. All Rights Reserved.</p></footer>
 </body>
-</html>
+</html>‎Add me as a contact on WhatsApp.
+https://wa.me/qr/3TCISYSKVQOHC1<img width="1179" height="2556" alt="image" src="https://github.com/user-attachments/assets/1fcdab90-3669-4b02-80b0-f7df54e21566" />
+
+
