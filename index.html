@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsh Traders | Jute Bags & Industrial Scrap Dealer</title>
+    <style>
+        :root {
+            --primary-slate: #2c3e50;
+            --accent-green: #27ae60;
+            --light-bg: #f8f9fa;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+            --border-color: #dddddd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--text-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-slate);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        .gst-tag {
+            font-size: 12px;
+            background: #eef2f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-slate);
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--accent-green);
+        }
+
+        .btn-quote {
+            background-color: var(--accent-green);
+            color: var(--text-light) !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            margin-top: 65px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            color: #bdc3c7;
+        }
+
+        .owner-badge {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid var(--accent-green);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--primary-slate);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-green);
+            margin: 8px auto 0 auto;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .product-container { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 30px; }
+        }
+
+        .product-category {
+            background: white;
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-slate);
+        }
+
+        .product-category.eco {
+            border-top-color: var(--accent-green);
+        }
+
+        .product-category h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-slate);
+        }
+
+        .product-list-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .price-tag {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .contact-section {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        .info-box h4 {
+            margin-bottom: 10px;
+            color: var(--primary-slate);
+            font-size: 18px;
+        }
+
+        .info-box p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            background-color: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        footer {
+            background-color: var(--primary-slate);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Arsh <span>Traders</span> <span class="gst-tag">GSTIN: 09ANLPA2014NZZ1</span></div>
+            <nav>
+                <a href="#products">Products & Rates</a>
+                <a href="#contact" class="btn-quote">Sampark Karein</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="owner-badge">Proprietor: Mukhtar Ahmad</div>
+            <h1>Jute Bags & Industrial Scrap Materials Dealer</h1>
+            <p>Hum behtareen quality ke eco-friendly jute bags aur har prakar ka industrial scrap (Iron, Plastic, Paper) bulk quantity me supply karte hain.</p>
+            <a href="#contact" style="display: inline-block; background: var(--accent-green); color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold;">Order / Quotation Ke Liye Baat Karein</a>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2 class="section-title">Hamare Products aur Rates</h2>
+        <div class="product-container">
+            
+            <div class="product-category">
+                <h3>Industrial Scrap Materials</h3>
+                <div class="product-list-item">
+                    <span>Iron (Loha) Scrap</span>
+                    <span class="price-tag">₹25 - ₹35 / Kg</span>
+                </div>
+                <div class="product-list-item">
+                    <span>Plastic Scrap</span>
+                    <span class="price-tag">₹15 - ₹25 / Kg</span>
+                </div>
+                <div class="product-list-item">
+                    <span>Paper / Cardboard (Gatta)</span>
+                    <span class="price-tag">₹12 - ₹15 / Kg</span>
+                </div>
+                <p style="font-size: 12px; color: #7f8c8d; margin-top: 15px;">*Note: Market ke hisab se rate upar-niche ho sakte hain. Bulk order par vishesh chhut.</p>
+            </div>
+
+            <div class="product-category eco">
+                <h3>Premium Jute Bags</h3>
+                <div class="product-list-item">
+                    <span>Hessian Bags (Anaj/Alloo Boriyan)</span>
+                    <span class="price-tag">Bulk Supply</span>
+                </div>
+                <div class="product-list-item">
+                    <span>Sacking Bags (Heavy Duty Packaging)</span>
+                    <span class="price-tag">Industrial Spec</span>
+                </div>
+                <div class="product-list-item">
+                    <span>Shopping & Promotional Jute Bags</span>
+                    <span class="price-tag">Eco-Friendly</span>
+                </div>
+                <div class="product-list-item">
+                    <span>Custom Logo & Name Printing</span>
+                    <span class="price-tag">Available</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Humse Sampark Karein</h2>
+        <div class="contact-grid">
+            <div class="info-box">
+                <h4>Address / Yard Location:</h4>
+                <p>Shahmau, Tehsil Tiloi,<br>Near Sanno Devi School,<br>Uttar Pradesh - 229304</p>
+
+                <h4>Mobile Numbers (Call / WhatsApp):</h4>
+                <p>
+                    <a href="tel:9415745551" style="color: var(--accent-green); text-decoration: none; font-weight: 
